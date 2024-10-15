@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #ff3c78;
+  --light-black: rgba(0, 0, 0, 0.89);
+  --black: #000;
+  --white: #fff;
+  --grey: #aaa;
+}
+
+body {
+  font-family: "Poppins", Times, serif;
+}
+
+.hero {
+  background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-parent {
+  background-color: black;
+}
+
+.end-btn {
+  border: var(--grey);
+  background: var(--grey);
+}
+
+.firefly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  pointer-events: none;
+}
+
+.firefly::before,
+.firefly::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: -10px;
+}
+
+.firefly::before {
+  background: black;
+  opacity: 0.4;
+  animation: drift ease alternate infinite;
+}
+
+.firefly::after {
+  background: white;
+  opacity: 0;
+  box-shadow: 0 0 0 0 yellow;
+  animation: drift ease alternate infinite, flash ease infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flash {
+  0%,
+  30%,
+  100% {
+    opacity: 0;
+    box-shadow: 0 0 0 0 yellow;
+  }
+  5% {
+    opacity: 1;
+    box-shadow: 0 0 20px 4px yellow;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-object {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 1s;
+}
+
+.slide-in-object.animate {
+  animation: slideInFromLeft 1s ease-out 0.1s forwards;
+}
+
+.slide-in-object:nth-child(1).animate {
+  animation-delay: 0.3s;
+}
+
+.slide-in-object:nth-child(2).animate {
+  animation-delay: 0.5s;
+}
+
+.slide-in-object:nth-child(3).animate {
+  animation-delay: 1s;
+}
+
+.slide-in-object:nth-child(4).animate {
+  animation-delay: 1.5s;
+}
+
+.slide-in-object:nth-child(5).animate {
+  animation-delay: 2s;
+}
+.slide-in-object:nth-child(6).animate {
+  animation-delay: 2.5s;
+}
+.slide-in-object:nth-child(7).animate {
+  animation-delay: 3s;
+}
+
+.image-wrapper {
+  opacity: 0;
+  transform: rotateY(0deg);
+  transition: opacity 0.5s, transform 1s;
+  perspective: 1000px;
+}
+.image-wrapper.visible {
+  opacity: 1;
+  animation: rotateImage 2s ease-in-out;
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotateY(30deg);
+  }
+  50% {
+    transform: rotateY(15deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.image-border {
+  border: 2px solid #c0eba6;
+  transition: border-color 0.5s ease;
+}
+
+.pie-chart {
+  background: radial-gradient(
+      circle closest-side,
+      white 0,
+      white 34.98%,
+      transparent 34.98%,
+      transparent 66%,
+      white 0
+    ),
+    conic-gradient(
+      #4e79a7 0 28%,
+      #f28e2c 0 61%,
+      #e15759 0 77%,
+      #76b7b2 0 87%,
+      #59a14f 0 93%,
+      #edc949 0 100%
+    );
+  position: relative;
+  width: 500px;
+  min-height: 350px;
+  margin: 0;
+}
+.pie-chart cite {
+  position: absolute;
+  bottom: 0;
+  font-size: 80%;
+  padding: 1rem;
+  color: gray;
+}
+.pie-chart figcaption {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: smaller;
+  text-align: right;
+}
+.pie-chart span:after {
+  display: inline-block;
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.4em;
+  height: 0.8em;
+  border-radius: 0.2em;
+  background: currentColor;
+}
+
+.album {
+  background-color: #dbdbdb;
+}
+
+.btn-sm {
+  border-radius: 5%;
+  border: 1px solid #c0eba6;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 225px;
+  overflow: hidden;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.album {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.album.visible {
+  opacity: 1;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact {
+  margin-top: 45px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.form .form-txt {
+  flex-basis: 48%;
+}
+
+.form .form-txt span {
+  color: var(--white);
+  font-size: 14px;
+}
+
+.form .form-txt h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: var(--grey);
+}
+
+.form .form-txt h5 {
+  font-weight: 600;
+  margin: 15px 0;
+  color: var(--grey);
+}
+
+.form .form-txt a {
+  text-decoration: none;
+}
+
+.form .form-txt p {
+  color: var(--white);
+  font-size: 14px;
+}
+
+.form .form-details {
+  flex-basis: 48%;
+}
+
+.form .form-details input[type="text"],
+.form .form-details input[type="email"] {
+  padding: 15px 20px;
+  color: var(--black);
+  outline: none;
+  border: 1px solid var(--grey);
+  margin: 35px 15px;
+  font-size: 14px;
+}
+
+.form .form-details textarea {
+  padding: 15px 20px;
+  margin: 0 15px;
+  color: var(--black);
+  outline: none;
+  border: 1px solid var(--grey);
+  font-size: 14px;
+  resize: none;
+}
+
+.form .form-details button {
+  padding: 15px 25px;
+  color: var(--white);
+  font-weight: 500;
+  background: var(--black);
+  outline: none;
+  border: 1px var(--white) solid;
+  margin: 15px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .pie-chart {
+    width: 400px;
+    min-height: 300px;
+  }
+  .img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form-details button {
+    margin-left: 0;
+  }
+  .form .form-details input[type="text"],
+  .form .form-details input[type="email"],
+  .form .form-details textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+  .form .form-details input[type="text"] {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form-details button {
+    margin-left: 0;
+  }
+  .form .form-details input[type="text"],
+  .form .form-details input[type="email"],
+  .form .form-details textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+  .form .form-details input[type="text"] {
+    margin-bottom: 0px;
+  }
+}
+
+a .active {
+  color: #c0eba6;
+}

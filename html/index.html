@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIsaacWhiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="bg-dark">
+
+    <div class="navbar-parent">
+        <div class="cointainer navbar">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#hero">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">PORTIFOLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="hero" class="parent hero-parent vh-100">
+        <div class="container hero d-flex w-100 h-100 justify-content-center align-items-center text-white">
+            <div class="px-4 py-5 my-5 text-center">
+                <h1 class="display-5 fw-bold">I am Ssekajja Wavamuno Isaac</h1>
+                <h2 class="display-5">A Software Engineer</h2>
+                <div class="col-lg-6 mx-auto">
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="#projects"><button class="btn end-btn" type="button">Endeavours</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="parent about-parent bg-white w-100">
+        <div class="container px-4 py-5 bg-white justify-content-center text-center" id="featured-3">
+            <h2 class="pb-1 border-bottom">ABOUT</h2>
+            <div class="row g-4 pt-5 pb-0 row-cols-1 row-cols-lg-3">
+                <div class="feature col text-center">
+                    <div class="image-wrapper">
+                        <img src="../assets/resourceful.png" class="img-fluid border-0 d-block mx-auto" alt="..."
+                            width="150">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis slide-in-object">Intuitive</h3>
+                    <p class="slide-in-object">Easy to use UI/UX.</p>
+                </div>
+                <div class="feature col text-center">
+                    <div class="image-wrapper">
+                        <img src="../assets/synchronization.png" class="img-fluid border-0 d-block mx-auto" alt="..."
+                            width="150">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis slide-in-object">Responsive</h3>
+                    <p class="slide-in-object">Software adaptive to all screen sizes.</p>
+                </div>
+                <div class="feature col text-center">
+                    <div class="image-wrapper">
+                        <img src="../assets/flash.png" class="img-fluid border-0 d-block mx-auto" alt="..." width="150">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis slide-in-object">Fast</h3>
+                    <p class="slide-in-object">Optmized software that gives swift responses.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pb-4 pt-0 text-dark bg-white">
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="text-center">
+                        <img src="../assets/ssekajja.jpg" width="350px" height="350px"
+                            class="image-border rounded-circle img" alt="ssekajja wavamuno isaac image">
+                        <div class="text-center">
+                            <h2>Who's he?</h2>
+                            <p>I'am Fullstack Software Engineer based in Kampala, Uganda.
+                                <br>Grilled with enthusiasm to craft top-notch quality
+                                software through a blend of different technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="h-100 p-0 bg-body-tertiary d-flex justify-content-center">
+                        <figure class="pie-chart">
+                            <h2 class="d-flex justify-content-center">Technologies</h2>
+                            <figcaption>
+                                Javascript<span style="color:#4e79a7"></span><br>
+                                Java<span style="color:#f28e2c"></span><br>
+                                Spring Boot<span style="color:#e15759"></span><br>
+                                Node<span style="color:#76b7b2"></span><br>
+                                SQL<span style="color:#59a14f"></span><br>
+                                Others<span style="color:#edc949"></span>
+                            </figcaption>
+                            <cite>Whiz Incoporation</cite>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="album py-5  text-black" id="projects">
+        <div class="container">
+            <h2 class="pb-1 border-bottom d-flex justify-content-center">PROJECTS</h2>
+            <div class="pt-4 row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="img-div">
+                            <img src="../assets/coding.png" class="card-img-top mt-2 card-image" height="220"
+                                alt="Web repository logo">
+                        </div>
+                        <div class="card-body">
+                            <h3>Spess Ark</h3>
+                            <p class="card-text">This is a web based secondary school (0' Level) student scores
+                                management application used to create, delete, update and store student scores.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/Isaac-Whiz/Spess-s-Ark">
+                                    <button type="button" class="btn btn-sm">View</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="https://www.kindpng.com/picc/m/587-5875144_sda-church-logo-png-seventh-day-adventist-church.png"
+                            class="card-img-top" height="250" alt="Adventist church logo">
+                        <div class="card-body">
+                            <h3>SDA Nyimba App</h3>
+                            <p class="card-text">This is an Android powered application, tha gives 250 Seventh Day
+                                Adventist hymns encoded in Luganda language.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/Isaac-Whiz/SDA_Nyimba">
+                                    <button type="button" class="btn btn-sm">View</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="../assets/whiz-app.png" class="card-img-top card-image" height="250"
+                            alt="Whiz App Logo">
+                        <div class="card-body">
+                            <h3>Whiz App</h3>
+                            <p class="card-text">This is also an Android powered applicaion which facilitates realtime
+                                communication between individuals.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/Isaac-Whiz/Whiz-App">
+                                    <button type="button" class="btn btn-sm">View</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="../assets/shoppe-logo.png" class="card-img-top card-image" height="250"
+                            alt="Shoppe logo">
+                        <div class="card-body">
+                            <h3>Shoppe</h3>
+                            <p class="card-text">This is a Windows desktop application that aids in stock management of
+                                a shope.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/Isaac-Whiz/Shoppe">
+                                    <button type="button" class="btn btn-sm">View</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="image-container">
+                            <img src="../assets/incident-reporting-system.png" class="card-img-top card-image"
+                                alt="Incident Reporting System logo" height="200">
+                        </div>
+                        <div class="card-body">
+                            <h3>Incident Reporting Application</h3>
+                            <p class="card-text">This is an Android based crime reporting tool, used to capture and send
+                                information about happening incidents to the Uganda Police.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/Isaac-Whiz/IncidentReportinApp">
+                                    <button type="button" class="btn btn-sm">View</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="image-container">
+                            <img src="../assets/weather.png" class="card-img-top card-image" height="200"
+                                alt="Weather logo">
+                        </div>
+                        <div class="card-body">
+                            <h3>Weather App</h3>
+                            <p class="card-text">A Windows platformed tool used to show the current weather condition of
+                                a specified place.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/Isaac-Whiz/Weather-App">
+                                    <button type="button" class="btn btn-sm">View</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="contact container text-white">
+            <h2 class="pb-1 border-bottom text-center">CONTACT</h2>
+            <form>
+                <div class="mt-0 form mb-0 d-flex justify-content-center">
+                    <div class="form-txt">
+                        <h3>Ping Me via</h3>
+                        <h5>Tel:</h5>
+                        <a href="tel:+256703933905">
+                            <p>+256703933905</p>
+                        </a>
+                        <a href="tel:+256773883750">
+                            <p>+256773883750</p>
+                        </a>
+                        <h5>Email:</h5>
+                        <a href="mailto:ssekajjawavamuno@gmail.com">
+                            <p>ssekajjawavamuno@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="form-details">
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <textarea name="message" id="message" cols="60" rows="7" placeholder="Message"
+                            required></textarea>
+                        <button id="btnSend">SEND MESSAGE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container-fluid w-100 bg-white">
+            <div class="container bg-white">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Whiz, Inc</span>
+                    </div>
+
+                    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                        <li class="ms-3"><a class="text-body-secondary"
+                                href="https://www.linkedin.com/in/ssekajja-wavamuno-isaac-628a612b6"><img
+                                    src="../assets/linkedin.png" alt="linkedIn logo" class="bi" width="24" height="24">
+                            </a></li>
+                        <li class="ms-3"><a class="text-body-secondary" href="https://x.com/IsaacWavamuno?s=09"><img
+                                    src="../assets/x.jfif" alt="X logo" class="bi" width="24" height="24">
+                            </a></li>
+                        <li class="ms-3"><a class="text-body-secondary"
+                                href="https://www.facebook.com/ssekajja.isaac.94?mibextid=ZbWKwL"><img
+                                    src="../assets/facebook.png" alt="Facebook logo" class="bi" width="24" height="24">
+                            </a></li>
+                        <li class="ms-3"><a class="text-body-secondary" href="https://github.com/Isaac-Whiz"><img
+                                    src="../assets/github-logo.png" alt="Github logo" class="bi" width="24" height="24">
+                            </a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
