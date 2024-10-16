@@ -11,6 +11,7 @@ class Index {
     this.txtEmail = document.getElementById("email");
     this.txtMessage = document.getElementById("message");
     this.btnSend = document.getElementById("btnSend");
+    this.toastEl = document.getElementById("liveToast");
 
     this.#init();
   }
@@ -241,6 +242,7 @@ class Index {
   #sendMessage() {
     this.btnSend.addEventListener("click", async (event) => {
       event.preventDefault();
+
       this.#getEmailTemplate();
       await axios
         .post(
@@ -256,6 +258,8 @@ class Index {
           this.txtName.value = "";
           this.txtEmail.value = "";
           this.txtMessage.value = "";
+          const toast = new bootstrap.Toast(this.toastEl);
+          toast.show();
         })
         .catch(() => {});
     });
