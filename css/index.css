@@ -335,6 +335,16 @@ body {
     height: 250px;
   }
 }
+@media only screen and (width: 768px) and (height: 1024px) {
+  .pie-chart {
+    width: 370px;
+  }
+}
+@media only screen and (width: 820px) and (height: 1180px) {
+  .pie-chart {
+    width: 370px;
+  }
+}
 
 @media (max-width: 500px) {
   .form {
